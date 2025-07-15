@@ -14,8 +14,9 @@ import {
 
 export default function Index() {
   return (
-    <SafeAreaView className="flex-1 bg-white mt-7">
+    <SafeAreaView className="flex-1 bg-white">
       <FlatList
+        className="mt-7"
         data={offers}
         renderItem={({ item, index }) => {
           const isEven: boolean = index % 2 === 0;

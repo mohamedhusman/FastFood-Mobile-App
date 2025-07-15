@@ -1,11 +1,22 @@
+import seed from "@/lib/seed";
 import React from "react";
-import { Text, View } from "react-native";
+import { Button, Text } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const search = () => {
   return (
-    <View>
+    <SafeAreaView>
       <Text>search</Text>
-    </View>
+
+      <Button
+        title="Seed"
+        onPress={() =>
+          seed().catch((error) =>
+            console.log("falid to seed the databas.", error)
+          )
+        }
+      />
+    </SafeAreaView>
   );
 };
 
